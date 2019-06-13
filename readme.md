@@ -1,4 +1,4 @@
-# GOXParse (Glens OpenVAS XML Parser)#
+# GOXParse (Glens OpenVAS XML Parser) #
 
 GOXParse is a python script which parses OpenVAS/Greenbone Security Assistant XML scan reports into a simple delimited (eg CSV) format, with options to filter by host and/or min/max CVSS score.
 
