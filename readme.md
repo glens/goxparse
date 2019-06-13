@@ -1,4 +1,4 @@
-#GOXParse (Glens OpenVAS XML Parser)#
+# GOXParse (Glens OpenVAS XML Parser)#
 
 GOXParse is a python script which parses OpenVAS/Greenbone Security Assistant XML scan reports into a simple delimited (eg CSV) format, with options to filter by host and/or min/max CVSS score.
 
@@ -34,8 +34,8 @@ usage examples:
 ```
 
 
-### Sample Output:###
-#### Normal####
+### Sample Output: ###
+#### Normal ####
 ```
 $ ./goxparse.py ../testdata/report1.xml -cvssmin 8
 Threat,IP,CVSS,Service,Port,Protocol,OID,Name
@@ -48,7 +48,7 @@ High,192.168.32.132,10.0,nfs,2049,udp,1.3.6.1.4.1.25623.1.0.102014,NFS export
 High,192.168.32.193,9.0,ssh,22,tcp,1.3.6.1.4.1.25623.1.0.103239,SSH Brute Force Logins with default Credentials
 High,192.168.32.8,10.0,nfs,2049,udp,1.3.6.1.4.1.25623.1.0.102014,NFS export
 ```
-#### CSV file + threatlevel filter####
+#### CSV file + threatlevel filter ####
 ```
 $ ./goxparse.py ../testdata/report1.xml -matchfile ../testdata/csvfile.csv -threatlevel high
 High,192.168.33.7,7.5,mysql,3306,tcp,yes,1.3.6.1.4.1.25623.1.0.803462,MySQL 'yaSSL' Buffer Overflow Vulnerability
@@ -60,7 +60,7 @@ High,192.168.13.195,9.0,ssh,22,tcp,yes,1.3.6.1.4.1.25623.1.0.103239,SSH Brute Fo
 High,192.168.13.195,9.3,mysql,3306,tcp,no,1.3.6.1.4.1.25623.1.0.100271,MySQL 5.x Unspecified Buffer Overflow Vulnerability
 ```
 
-#CSV Filter file format:#
+# CSV Filter file format: #
 
 Format is: IP,port1,port2,port3,etc
 
